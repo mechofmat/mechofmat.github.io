@@ -1,108 +1,198 @@
 <!DOCTYPE html>
-<html><head>
-<meta content="text/html; charset=UTF-16" http-equiv="content-type"><title>International Center For Applied Computational Mechanics</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICACM Committee</title>
+  <meta name="description" content="Committee pages for the International Center for Applied Computational Mechanics." />
 
-<style type="text/css">
-</style>
-<style>
-ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
-background-color:blue;
-}
-li {
-float: left;
-}
-li a {
-display: block;
-color: white;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-}
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-background-color: #111;
-}
-.active {
-background-color: orange;
-}
-</style></head>
-<body leftmargin="1" style="background-color: azure;">
-<img style="width: 100%; height: 200px;" alt="" src="image/banniere1.jpg" title="Banniere1" longdesc="image/banniere1.jpg">
-<ul>
-<li><a href="home.html">ICACM Home</a></li>
-<li><a href="partners.html">Partners</a></li>
-<li><a class="active" href="committee.html">Committee</a></li>
-<li><a href="symposia.html">Previous symposia</a></li>
-<li><a href="upsymposium.html">10<sup>th</sup> symposium</a></li>
-<li><a href="publication.html">Publications</a></li>
-</ul>
-<div style="width: 100%; margin-top: 0px; height: 87px;">
-<div style="text-align: center;"><big><font color="#041943" size="6"><big>I</big></font><font color="#041943"><font size="5"><big>CACM</big></font>
-</font> <font color="#041943" size="6"><big>C</big></font><font color="#041943"><font size="5"><big>ommittees
-</big></font></font></big></div>
-<br>
-<br>
-<div style="text-align: center;"><font color="#041943"><br>
-<span style="text-decoration: underline;"><font size="6">ICACM
-Executive Board</font></span></font><br>
-<font color="#041943"><span style="text-decoration: underline;"></span></font></div>
-<font color="#041943"><span style="text-decoration: underline;"></span></font>
-<br>
-<div style="text-align: center;">Prof. Alberto Cuitino
-(Rutgers Univ., USA) <br>
-<br>
-Prof. Felix Darve (<font color="black" size="4">Univ. Grenoble Alpes</font>, FR) <br>
-<br>
-Dr. Patrick Franciosi (<font color="black" size="4">Univ. Paris Nord, FR</font>) <br>
-<br>Prof. David Hahn (Univ. Florida, USA)<br>
-<br>
-Dr. David Jeffcoat (Univ. Florida/ REEF, USA) <br>
-<br>
-Prof. Djimedeo Kondo (Univ. Paris 6, FR) <br>
-<br>
-Prof. Jian-Fu Shao (Univ. Lille, FR) <br>
-</div>
-<br>
-<br>
-<br>
-<div style="text-align: center;"><font color="#041943"><br>
-<span style="text-decoration: underline;"><font size="6">ICACM
-Advisory Board</font></span></font><br>
-<font color="#041943"><span style="text-decoration: underline;"></span></font></div>
-<font color="#041943"><span style="text-decoration: underline;"></span></font>
-<br>
-<div style="text-align: center;">Dr. Eric Buzaud (CEA,FR) <br>
-<br>
-Dr. Fariba Fahroo (DARPA, USA) <br>
-<br>
-Dr. Row Rogacki (IHMC, USA) <br>
-<br>
-Dr. Martin Schmidt (AFSOR, USA) <br>
-</div>
-<br>
-<br>
-<br>
-<div style="text-align: center;"><font color="#041943"><br>
-<span style="text-decoration: underline;"><font size="6">ICACM
-Scientific Board</font></span></font><br>
-<font color="#041943"><span style="text-decoration: underline;"></span></font></div>
-<font color="#041943"><span style="text-decoration: underline;"></span></font>
-<br>
-<div style="text-align: center;">Prof.
-Salima Bouvier (Univ. T. Compiegne, FR) <br>
-<br>
-Prof. Oana Cazacu (Univ. Florida/REEF, USA) <br>
-<br>
-Dr. Benjamin Erzar (CEA, FR) <br>
-<br>
-Prof. Ioan R. Ionescu (<font color="black" size="4">Univ. Paris Nord</font>, FR) <br>
-<br>
-Prof. Catalin Picu (RPI, USA) <br>
-<br>
-Dr. Benoit Revil-Baudard (Univ. Florida/REEF, USA) </div>
-</div>
-</body></html>
+  <style>
+    :root {
+      --bg: #f5f8fc;
+      --surface: #ffffff;
+      --text: #1f2937;
+      --muted: #5b6472;
+      --primary: #0f4c81;
+      --primary-dark: #0b3a62;
+      --accent: #f59e0b;
+      --border: #d9e2ec;
+      --shadow: 0 10px 30px rgba(15, 76, 129, 0.08);
+      --radius: 18px;
+      --max-width: 1200px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top, rgba(15, 76, 129, 0.08), transparent 35%),
+        linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .site-header {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: white;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .banner {
+      width: 100%;
+      display: block;
+      max-height: 240px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .nav {
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.25rem;
+      background: rgba(15, 76, 129, 0.92);
+    }
+
+    .nav a {
+      display: inline-block;
+      padding: 0.95rem 1.1rem;
+      color: rgba(255, 255, 255, 0.95);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      border-radius: 999px;
+      margin: 0.35rem 0;
+      transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+    }
+
+    .nav a:hover {
+      background: rgba(255, 255, 255, 0.12);
+      transform: translateY(-1px);
+    }
+
+    .nav .active {
+      background: var(--accent);
+      color: #1a1a1a;
+    }
+
+    .container {
+      width: min(100% - 2rem, var(--max-width));
+      margin: 0 auto;
+      padding-bottom: 2.5rem;
+    }
+
+    .hero {
+      padding: 2.5rem 0 1rem;
+      text-align: center;
+    }
+
+    .page-title {
+      margin: 0;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      line-height: 1.1;
+      color: var(--primary-dark);
+      letter-spacing: -0.03em;
+    }
+
+    .board {
+      max-width: 860px;
+      margin: 1.2rem auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.25rem 1.4rem;
+    }
+
+    .board h2 {
+      margin: 0 0 0.8rem;
+      color: var(--primary-dark);
+      font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+      text-decoration: underline;
+      text-align: center;
+    }
+
+    .board ul {
+      margin: 0;
+      padding-left: 1.25rem;
+      color: var(--text);
+    }
+
+    .board li { margin: 0.45rem 0; }
+
+    @media (max-width: 720px) {
+      .nav a { padding: 0.8rem 0.95rem; }
+      .hero { padding-top: 2rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <img src="image/banniere1.jpg" alt="ICACM banner" class="banner" />
+    <nav class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">ICACM Home</a></li>
+        <li><a href="partners.html">Partners</a></li>
+        <li><a class="active" href="committee.html" aria-current="page">Committee</a></li>
+        <li><a href="symposia.html">Previous Symposia</a></li>
+        <li><a href="upsymposium.html">10<sup>th</sup> Symposium</a></li>
+        <li><a href="publication.html">Publications</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="page-title">ICACM Committees</h1>
+    </section>
+
+    <section class="board" aria-labelledby="executive-board">
+      <h2 id="executive-board">ICACM Executive Board</h2>
+      <ul>
+        <li>Prof. Alberto Cuitino (Rutgers Univ., USA)</li>
+        <li>Prof. Felix Darve (Univ. Grenoble Alpes, FR)</li>
+        <li>Dr. Patrick Franciosi (Univ. Paris Nord, FR)</li>
+        <li>Prof. David Hahn (Univ. Florida, USA)</li>
+        <li>Dr. David Jeffcoat (Univ. Florida/REEF, USA)</li>
+        <li>Prof. Djimedeo Kondo (Univ. Paris 6, FR)</li>
+        <li>Prof. Jian-Fu Shao (Univ. Lille, FR)</li>
+      </ul>
+    </section>
+
+    <section class="board" aria-labelledby="advisory-board">
+      <h2 id="advisory-board">ICACM Advisory Board</h2>
+      <ul>
+        <li>Dr. Eric Buzaud (CEA, FR)</li>
+        <li>Dr. Fariba Fahroo (DARPA, USA)</li>
+        <li>Dr. Row Rogacki (IHMC, USA)</li>
+        <li>Dr. Martin Schmidt (AFSOR, USA)</li>
+      </ul>
+    </section>
+
+    <section class="board" aria-labelledby="scientific-board">
+      <h2 id="scientific-board">ICACM Scientific Board</h2>
+      <ul>
+        <li>Prof. Salima Bouvier (Univ. T. Compiegne, FR)</li>
+        <li>Prof. Oana Cazacu (Univ. Florida/REEF, USA)</li>
+        <li>Dr. Benjamin Erzar (CEA, FR)</li>
+        <li>Prof. Ioan R. Ionescu (Univ. Paris Nord, FR)</li>
+        <li>Prof. Catalin Picu (RPI, USA)</li>
+        <li>Dr. Benoit Revil-Baudard (Univ. Florida/REEF, USA)</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
