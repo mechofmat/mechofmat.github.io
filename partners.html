@@ -1,163 +1,401 @@
 <!DOCTYPE html>
-<html><head>
-<meta content="text/html; charset=UTF-16" http-equiv="content-type"><title>International Center For Applied Computational Mechanics</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICACM Partners</title>
+  <meta name="description" content="Academic partners of the International Center for Applied Computational Mechanics." />
 
-<style type="text/css">
-</style>
-<style>
-ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
-background-color:blue;
-}
-li {
-float: left;
-}
-li a {
-display: block;
-color: white;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-}
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-background-color: #111;
-}
-.active {
-background-color: orange;
-}
-</style>
+  <style>
+    :root {
+      --bg: #f5f8fc;
+      --surface: #ffffff;
+      --surface-alt: #f9fbff;
+      --text: #1f2937;
+      --muted: #5b6472;
+      --primary: #0f4c81;
+      --primary-dark: #0b3a62;
+      --accent: #f59e0b;
+      --border: #d9e2ec;
+      --shadow: 0 10px 30px rgba(15, 76, 129, 0.08);
+      --radius: 18px;
+      --max-width: 1200px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top, rgba(15, 76, 129, 0.08), transparent 35%),
+        linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    .site-header {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: white;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .banner {
+      width: 100%;
+      display: block;
+      max-height: 240px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .nav {
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.25rem;
+      background: rgba(15, 76, 129, 0.92);
+    }
+
+    .nav li {
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav a {
+      display: inline-block;
+      padding: 0.95rem 1.1rem;
+      color: rgba(255, 255, 255, 0.95);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      border-radius: 999px;
+      margin: 0.35rem 0;
+      transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+    }
+
+    .nav a:hover {
+      background: rgba(255, 255, 255, 0.12);
+      transform: translateY(-1px);
+    }
+
+    .nav .active {
+      background: var(--accent);
+      color: #1a1a1a;
+    }
+
+    .container {
+      width: min(100% - 2rem, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 2.5rem 0 1.25rem;
+      text-align: center;
+    }
+
+    .page-title {
+      margin: 0;
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.1;
+      color: var(--primary-dark);
+      letter-spacing: -0.03em;
+    }
+
+    .subtitle {
+      margin: 0.75rem auto 0;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .region-section {
+      margin-bottom: 3.5rem;
+    }
+
+    .region-title {
+      margin: 0 0 1.75rem;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      line-height: 1.1;
+      color: var(--primary-dark);
+      letter-spacing: -0.02em;
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      padding: 0 0 1.5rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(15, 76, 129, 0.12);
+      border-color: rgba(15, 76, 129, 0.22);
+    }
+
+    .card-link {
+      display: inline-block;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-image {
+      max-width: 200px;
+      max-height: 120px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .card-body {
+      text-align: center;
+      margin-top: 0.75rem;
+    }
+
+    .partner-name {
+      margin: 0.75rem 0 0;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.35;
+    }
+
+    .partner-affiliation {
+      margin: 0.35rem 0 0;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .footer-space {
+      height: 1.5rem;
+    }
+
+    @media (max-width: 720px) {
+      .nav a {
+        padding: 0.8rem 0.95rem;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+      }
+
+      .hero {
+        padding-top: 2rem;
+      }
+
+      .region-title {
+        font-size: 1.3rem;
+        margin-bottom: 1.25rem;
+      }
+    }
+  </style>
 </head>
-<body leftmargin="1" style="background-color: azure;">
-<img style="width: 100%; height: 200px;" alt="" src="image/banniere1.jpg" title="Banniere1" longdesc="image/banniere1.jpg">
-<ul>
-<li><a href="home.html">ICACM Home</a></li>
-<li><a class="active" href="partners.html">Partners</a></li>
-<li><a href="committee.html">Committee</a></li>
-<li><a href="symposia.html">Previous symposia</a></li>
-<li><a href="upsymposium.html">10<sup>th</sup>
-symposium</a></li>
-<li><a href="publication.html">Publications</a></li>
-</ul>
-<div style="width: 100%; margin-top: 0px; height: 87px;">
-<div style="text-align: center;"><big><font color="#041943" size="6"><big>A</big></font><font color="#041943"><font size="5"><big>cademic</big></font>
-</font> <font color="#041943" size="6"><big>P</big></font><font color="#041943"><font size="5"><big>artners
-</big></font></font></big></div>
-<table style="width: 100%;" border="0">
-<tbody>
-<tr>
-<td style="height: 400px; text-align: center;" width="40%"> <font color="#041943"><span style="text-decoration: underline;"><font size="16">United
-States<br>
-</font> </span><br>
-</font>
-<table style="width: 100%; height: 80px;" border="0">
-<tbody>
-<tr>
-<td style="height: 80px; text-align: center;" width="50%"> <a target="_blank" title="UF" href="http://www.mae.ufl.edu"><img style="height: 100%;" longdesc="image/UF.jpg" title="UF" alt="" src="image/UF.jpg"></a><br>
-</td>
-<td style="height: 80px; text-align: center;" width="50%"> <a target="_blank" title="UF" href="http://www.reef.ufl.edu"><img style="height: 200%;" longdesc="image/REEF.jpg" title="UF" alt="" src="image/REEF.jpg"></a> </td>
-</tr>
-</tbody>
-</table>
-<div style="text-align: center;"><font color="#041943"> </font></div>
-<font color="#041943"> <font color="#041943"><font size="6">University of Florida / REEF <br>
-<br>
-<br>
-<table style="width: 100%; height: 80px;" border="0">
-<tbody>
-<tr>
-<td style="height: 80px; text-align: center;" width="100%"> <a target="_blank" title="rutgers" href="http://mae.rutgers.edu/"><img style="height: 100%;" longdesc="image/rutgers.png" title="UF" alt="" src="image/rutgers.png"></a><br>
-</td>
-</tr>
-</tbody>
-</table>
-Rutgers University<br>
-<br>
-<br>
-<table style="width: 100%; height: 80px;" border="0">
-<tbody>
-<tr>
-<td style="height: 80px; text-align: center;" width="50%"> <a target="_blank" title="UF" href="http://rpi.edu"><img style="height: 100%;" longdesc="image/Rensselaer.gif" title="UF" alt="" src="image/Rensselaer.gif"></a><br>
-</td>
-<td style="height: 80px; text-align: center;" width="50%"> <a target="_blank" title="UF" href="#"><img style="height: 70%;" longdesc="image/MSEC.gif" title="UF" alt="" src="image/MSEC.gif"></a> </td>
-</tr>
-</tbody>
-</table>
-Rensselaer Polytechnic Institute </font><br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-</font> </font></td>
-<td style="height: 400px; text-align: center;" width="5%"> <br>
-</td>
-<td style="height: 400px; text-align: center;" width="40%"> <br>
-<font color="#041943"><span style="text-decoration: underline;"><font size="16">France<br>
-<br>
-</font> </span><br>
-</font>
-<table style="width: 100%; height: 80px;" border="0">
-<tbody>
-<tr>
-<td style="height: 80px; text-align: center;" width="50%"> <a target="_blank" title="UF" href="http://www.univ-paris13.fr"><img style="height: 100%;" longdesc="image/P13.jpg" title="P13" alt="" src="image/P13.jpg"></a><br>
-</td>
-<td style="height: 80px; text-align: center;" width="50%"> <a target="_blank" title="UF" href="http://www-lpmtm.univ-paris13.fr/?lang=fr"><img style="border: 0px solid ; width: 200px; height: 100%;" longdesc="image/LPMTM.png" title="LPMTM" alt="" src="image/LPMTM.png"></a>
-</td>
-</tr>
-</tbody>
-</table>
-<div style="text-align: center;"><font color="#041943"> </font></div>
-<font color="#041943"> <font color="#041943"><font size="6">University Paris 13 / LSPM <br>
-<br>
-<br>
-<table style="width: 100%; height: 80px;" border="0">
-<tbody>
-<tr>
-<td style="height: 80px; text-align: center;" width="50%"> <a target="_blank" title="lille" href="http://www.univ-lille1.fr/"><img style="height: 100%;" longdesc="image/lille.jpg" title="UF" alt="" src="image/lille.jpg"></a><br>
-</td>
-<td style="height: 80px; text-align: center;" width="50%"> <a target="_blank" title="lille" href="http://mecanique.univ-lille1.fr/Recherche/LML"><img style="height: 100%;" longdesc="image/LML.png" title="UF" alt="" src="image/LML.png"></a><br>
-</td>
-</tr>
-</tbody>
-</table>
-University of Lille / LML <br>
-<br>
-<br>
-<table style="width: 100%; height: 80px;" border="0">
-<tbody>
-<tr>
-<td style="height: 80px; text-align: center;" width="50%"> <a target="_blank" title="UF" href="http://www.grenoble-inp.fr/"><img style="height: 100%;" longdesc="image/INP.jpg" title="UF" alt="" src="image/INP.jpg"></a><br>
-</td>
-<td style="height: 80px; text-align: center;" width="50%"> <a target="_blank" title="UF" href="https://www.3sr-grenoble.fr/?lang=fr"><img style="height: 70%;" longdesc="image/LAMA.png" title="UF" alt="" src="image/LAMA.png"></a> </td>
-</tr>
-</tbody>
-</table>
-University of Grenoble / L3S-R <br>
-<br>
-<br>
-<table style="width: 100%; height: 80px;" border="0">
-<tbody>
-<tr>
-<td style="height: 80px; text-align: center;" width="50%"> <a target="_blank" title="UF" href="http://www.utc.fr/"><img style="height: 100%;" longdesc="image/UTC.jpg" title="UF" alt="" src="image/UTC.jpg"></a><br>
-</td>
-<td style="height: 80px; text-align: center;" width="50%"> <a target="_blank" title="UF" href="http://roberval.utc.fr/?lang=fr"><img style="height: 70%;" longdesc="image/robertval.jpg" title="UF" alt="" src="image/robertval.jpg"></a>
-</td>
-</tr>
-</tbody>
-</table>
-University of Technology of Compiegne / Roberval <br>
-</font> <br>
-</font> </font></td>
-</tr>
-</tbody>
-</table>
-</div>
-</body></html>
+
+<body>
+  <header class="site-header">
+    <img src="image/banniere1.jpg" alt="ICACM banner" class="banner" />
+    <nav class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">ICACM Home</a></li>
+        <li><a class="active" href="partners.html">Partners</a></li>
+        <li><a href="committee.html">Committee</a></li>
+        <li><a href="symposia.html">Previous Symposia</a></li>
+        <li><a href="upsymposium.html">10<sup>th</sup> Symposium</a></li>
+        <li><a href="publication.html">Publications</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="page-title">Academic Partners</h1>
+      <p class="subtitle">
+        International academic institutions collaborating with the International Center for Applied Computational Mechanics.
+      </p>
+    </section>
+
+    <!-- United States Section -->
+    <section class="region-section">
+      <h2 class="region-title">United States</h2>
+      <div class="gallery" aria-label="United States partners">
+        <article class="card">
+          <a class="card-link" href="http://www.mae.ufl.edu" target="_blank" rel="noopener noreferrer">
+            <img class="card-image" src="image/UF.jpg" alt="University of Florida" />
+          </a>
+          <div class="card-body">
+            <p class="partner-name">University of Florida</p>
+            <p class="partner-affiliation">Mechanical and Aerospace Engineering Department</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="card-link" href="http://www.reef.ufl.edu" target="_blank" rel="noopener noreferrer">
+            <img class="card-image" src="image/REEF.jpg" alt="REEF" />
+          </a>
+          <div class="card-body">
+            <p class="partner-name">REEF</p>
+            <p class="partner-affiliation">Remote Facilities and Engineering Lab</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="card-link" href="http://mae.rutgers.edu/" target="_blank" rel="noopener noreferrer">
+            <img class="card-image" src="image/rutgers.png" alt="Rutgers University" />
+          </a>
+          <div class="card-body">
+            <p class="partner-name">Rutgers University</p>
+            <p class="partner-affiliation">Department of Mechanical and Aerospace Engineering</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="card-link" href="http://rpi.edu" target="_blank" rel="noopener noreferrer">
+            <img class="card-image" src="image/Rensselaer.gif" alt="Rensselaer Polytechnic Institute" />
+          </a>
+          <div class="card-body">
+            <p class="partner-name">Rensselaer Polytechnic Institute</p>
+            <p class="partner-affiliation">Department of Mechanical, Aerospace and Nuclear Engineering</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="card-link" href="#" target="_blank" rel="noopener noreferrer">
+            <img class="card-image" src="image/MSEC.gif" alt="MSEC" />
+          </a>
+          <div class="card-body">
+            <p class="partner-name">MSEC</p>
+            <p class="partner-affiliation">Manufacturing Systems and Engineering Center</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- France Section -->
+    <section class="region-section">
+      <h2 class="region-title">France</h2>
+      <div class="gallery" aria-label="France partners">
+        <article class="card">
+          <a class="card-link" href="http://www.univ-paris13.fr" target="_blank" rel="noopener noreferrer">
+            <img class="card-image" src="image/P13.jpg" alt="University Paris 13" />
+          </a>
+          <div class="card-body">
+            <p class="partner-name">University Paris 13</p>
+            <p class="partner-affiliation">Université Sorbonne Paris Nord</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="card-link" href="http://www-lpmtm.univ-paris13.fr/?lang=fr" target="_blank" rel="noopener noreferrer">
+            <img class="card-image" src="image/LPMTM.jpg" alt="LPMTM" />
+          </a>
+          <div class="card-body">
+            <p class="partner-name">LPMTM</p>
+            <p class="partner-affiliation">Laboratory of the Properties of Mechanical materials and Materials</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="card-link" href="http://www.univ-lille1.fr/" target="_blank" rel="noopener noreferrer">
+            <img class="card-image" src="image/lille.jpg" alt="University of Lille" />
+          </a>
+          <div class="card-body">
+            <p class="partner-name">University of Lille</p>
+            <p class="partner-affiliation">Université de Lille</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="card-link" href="http://mecanique.univ-lille1.fr/Recherche/LML" target="_blank" rel="noopener noreferrer">
+            <img class="card-image" src="image/LML.png" alt="LML" />
+          </a>
+          <div class="card-body">
+            <p class="partner-name">LML</p>
+            <p class="partner-affiliation">Laboratory of Mechanics of Lille</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="card-link" href="http://www.grenoble-inp.fr/" target="_blank" rel="noopener noreferrer">
+            <img class="card-image" src="image/INP.jpg" alt="INP Grenoble" />
+          </a>
+          <div class="card-body">
+            <p class="partner-name">INP Grenoble</p>
+            <p class="partner-affiliation">Institute National Polytechnique de Grenoble</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="card-link" href="https://www.3sr-grenoble.fr/?lang=fr" target="_blank" rel="noopener noreferrer">
+            <img class="card-image" src="image/3SR.png" alt="3SR Laboratory" />
+          </a>
+          <div class="card-body">
+            <p class="partner-name">3SR Laboratory</p>
+            <p class="partner-affiliation">Soils, Solids, Structures Laboratory</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="card-link" href="http://www.utc.fr/" target="_blank" rel="noopener noreferrer">
+            <img class="card-image" src="image/UTC.jpg" alt="UTC" />
+          </a>
+          <div class="card-body">
+            <p class="partner-name">University of Technology of Compiègne</p>
+            <p class="partner-affiliation">UTC</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="card-link" href="http://roberval.utc.fr/?lang=fr" target="_blank" rel="noopener noreferrer">
+            <img class="card-image" src="image/robertval.jpg" alt="Roberval Laboratory" />
+          </a>
+          <div class="card-body">
+            <p class="partner-name">Roberval Laboratory</p>
+            <p class="partner-affiliation">Laboratory of Mechanics - UTC</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="footer-space"></div>
+  </main>
+</body>
+</html>
