@@ -1,89 +1,214 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html><head>
-<meta content="text/html; charset=UTF-16" http-equiv="content-type"><title>International Center For Applied Computational Mechanics</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICACM Home</title>
+  <meta name="description" content="International Center for Applied Computational Mechanics home page." />
 
-<style type="text/css">
-</style>
-<style>
-ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
-background-color: blue;
-}
-li {
-float: left;
-}
-li a {
-display: block;
-color: white;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-}
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-background-color: #111;
-}
-.active {
-background-color: orange;
-}
-</style>
-</head><body leftmargin="1" style="background-color: azure;">
-<img style="width: 100%; height: 200px;" alt="" src="image/banniere1.jpg" title="Banniere1" longdesc="image/banniere1.jpg">
-<ul>
-<li><a class="active" href="home.html">ICACM
-Home</a></li>
-<li><a href="partners.html">Partners</a></li>
-<li><a href="committee.html">Committee</a></li>
-<li><a href="symposia.html">Previous symposia</a></li>
-<li><a href="upsymposium.html">10<sup>th</sup>
-symposium</a></li>
-<li><a href="publication.html">Publications</a></li>
-</ul>
-<table style="width: 100%; height: 5%; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="2" cellspacing="2">
-<tbody>
-<tr>
-<td style="width: 20%;">
-<dl style="text-align: center;">
-<img style="width: 50%;" alt="" src="image/ICACM%20logo.png" title="logo1" longdesc="image/ICACM%20logo.png">
-</dl>
-</td>
-<td style="width: 60%;">
-<dl style="text-align: center;">
-<dd style="margin-left: 0px; width: 100%; margin-top: 0px; height: 87px;"><big><font color="#041943" size="7"><big>I</big></font><font color="#041943"><font size="4"><big>nternational</big></font>
-</font> <font color="#041943" size="7"><big>C</big></font><font color="#041943"><font size="4"><big>enter
-For</big></font>
-</font> <font color="#041943" size="7"><big>A</big></font><font color="#041943"><font size="4"><big>pplied</big></font>
-</font> <font color="#041943" size="7"><big>C</big></font><font color="#041943" size="4"><big>omputational</big></font>
-<font color="#041943" size="7"><big>M</big></font><font color="#041943" size="4"><big>echanics</big></font></big></dd>
-</dl>
-</td>
-<td style="width: 20%;">
-<dl style="text-align: center;">
-<img style="width: 50%;" alt="" src="image/ICACM%20logo.png" title="logo1" longdesc="image/ICACM%20logo.png">
-</dl>
-</td>
-</tr>
-</tbody>
-</table>
-<br>
-<br>
-<br>
-<dd style="margin-left: 20%; width: 60%; text-align: justify;"><em><strong><font color="#000080" size="+1">ICACM is a partnership
-between several French and United States Universities with the scope of
-promoting joint research at the forefront of computational mechanics. </font><font size="+1"> <font color="#000080">ICACM was
-formed&nbsp; to facilitate the exchange and application of the
-world's most advanced knowledge in applied mechanics and mathematical
-sciences and in interdisciplinary fields like robotics, energetics,
-biomechanics, and environmental engineering.&nbsp;</font></font></strong></em></dd>
-<br>
-<br>
-<dd style="margin-left: 20%; width: 60%; text-align: justify;"><em><strong><font color="#000080" size="+1">The 10th symposium will be
-co-hosted by the Department of Mechanical and Aerospace Engineering,
-University of Florida&#8217;s Research Engineering and Education Institute
-(REEF) in Shalimar, FL, USA and by the Air Force
-Research Laboratory (AFRL), Eglin, FL, USA. <a href="upsymposium.html">(more information)</a>
-</font></strong></em></dd>
-</body></html>
+  <style>
+    :root {
+      --bg: #f5f8fc;
+      --surface: #ffffff;
+      --text: #1f2937;
+      --muted: #5b6472;
+      --primary: #0f4c81;
+      --primary-dark: #0b3a62;
+      --accent: #f59e0b;
+      --border: #d9e2ec;
+      --shadow: 0 10px 30px rgba(15, 76, 129, 0.08);
+      --radius: 18px;
+      --max-width: 1200px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top, rgba(15, 76, 129, 0.08), transparent 35%),
+        linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .site-header {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: white;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .banner {
+      width: 100%;
+      display: block;
+      max-height: 240px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .nav {
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.25rem;
+      background: rgba(15, 76, 129, 0.92);
+    }
+
+    .nav a {
+      display: inline-block;
+      padding: 0.95rem 1.1rem;
+      color: rgba(255, 255, 255, 0.95);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      border-radius: 999px;
+      margin: 0.35rem 0;
+      transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+    }
+
+    .nav a:hover {
+      background: rgba(255, 255, 255, 0.12);
+      transform: translateY(-1px);
+    }
+
+    .nav .active {
+      background: var(--accent);
+      color: #1a1a1a;
+    }
+
+    .container {
+      width: min(100% - 2rem, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 2.25rem 0 1rem;
+      text-align: center;
+    }
+
+    .page-title {
+      margin: 0;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      line-height: 1.1;
+      color: var(--primary-dark);
+      letter-spacing: -0.03em;
+    }
+
+    .logo-strip {
+      margin: 1.5rem auto 0;
+      display: grid;
+      grid-template-columns: minmax(80px, 1fr) 3fr minmax(80px, 1fr);
+      gap: 1rem;
+      align-items: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.25rem;
+    }
+
+    .logo-strip img {
+      width: min(100%, 120px);
+      margin: 0 auto;
+      display: block;
+    }
+
+    .logo-name {
+      margin: 0;
+      color: #041943;
+      font-size: clamp(1.2rem, 2.2vw, 2rem);
+      line-height: 1.35;
+    }
+
+    .content {
+      max-width: 860px;
+      margin: 1.5rem auto 2.5rem;
+      display: grid;
+      gap: 1.1rem;
+    }
+
+    .message {
+      margin: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      color: var(--primary-dark);
+      font-size: 1.03rem;
+      font-style: italic;
+      font-weight: 600;
+      text-align: justify;
+      padding: 1.25rem 1.3rem;
+    }
+
+    .message a {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    .footer-space { height: 1.5rem; }
+
+    @media (max-width: 720px) {
+      .nav a { padding: 0.8rem 0.95rem; }
+      .logo-strip { grid-template-columns: 1fr; text-align: center; }
+      .hero { padding-top: 2rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <img src="image/banniere1.jpg" alt="ICACM banner" class="banner" />
+    <nav class="nav" aria-label="Primary">
+      <ul>
+        <li><a class="active" href="index.html" aria-current="page">ICACM Home</a></li>
+        <li><a href="partners.html">Partners</a></li>
+        <li><a href="committee.html">Committee</a></li>
+        <li><a href="symposia.html">Previous Symposia</a></li>
+        <li><a href="upsymposium.html">10<sup>th</sup> Symposium</a></li>
+        <li><a href="publication.html">Publications</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="page-title">International Center for Applied Computational Mechanics</h1>
+      <div class="logo-strip" aria-label="ICACM identity">
+        <img src="image/ICACM%20logo.png" alt="ICACM logo" />
+        <p class="logo-name">International Center For Applied Computational Mechanics</p>
+        <img src="image/ICACM%20logo.png" alt="ICACM logo" />
+      </div>
+    </section>
+
+    <section class="content" aria-label="ICACM overview">
+      <p class="message">
+        ICACM is a partnership between several French and United States Universities with the scope of
+        promoting joint research at the forefront of computational mechanics. ICACM was formed to facilitate
+        the exchange and application of the world's most advanced knowledge in applied mechanics and
+        mathematical sciences and in interdisciplinary fields like robotics, energetics, biomechanics, and
+        environmental engineering.
+      </p>
+      <p class="message">
+        The 10th symposium will be co-hosted by the Department of Mechanical and Aerospace Engineering,
+        University of Florida’s Research Engineering and Education Institute (REEF) in Shalimar, FL, USA
+        and by the Air Force Research Laboratory (AFRL), Eglin, FL, USA.
+        <a href="upsymposium.html">(more information)</a>
+      </p>
+    </section>
+
+    <div class="footer-space"></div>
+  </main>
+</body>
+</html>
